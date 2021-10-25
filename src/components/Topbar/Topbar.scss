@@ -1,0 +1,159 @@
+@import "../../global.scss";
+
+.topbar {
+  width: 100%;
+  height: 60px;
+  //padding: 10px;
+  //margin: -8px;
+  left: 0;
+  top: 0;
+  background-color: $mainColor;
+  //justify-content: space-between;
+  color: red !important;
+  position: fixed;
+  z-index: 2;
+  transition: all 1s ease;
+  align-items: center;
+  .wrapper {
+    padding: 1px 30px;
+    display: flex;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    color: inherit;
+    margin-right: 40px;
+
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      //flex: 0.5;
+      a {
+        text-decoration: none;
+      }
+    }
+    .right {
+      flex: 0.6;
+
+      ul {
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        font-size: large;
+        list-style: none;
+
+        &:hover {
+          background-color: black;
+        }
+      }
+    }
+    /*.right {
+      display: flex;
+      align-items: center;
+      flex: 0;
+    }*/
+  }
+}
+/*
+  display: flex;
+  justify-content: space-evenly;
+  //margin-left: 25%;
+  margin-bottom: 450px;
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .wrapper {
+    padding: 10px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex: 0.5;
+      .logo {
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        color: inherit;
+        margin-right: 40px;
+      }
+      .ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        color: red;
+        display: flex;
+        flex-direction: row;
+        margin-left: 30px;
+        list-style: none;
+
+        .icon {
+          font-size: 18px;
+          margin-right: 5px;
+        }
+
+        span {
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+    }
+*/ /*
+    .right {
+      .hamburger {
+        width: 32px;
+        height: 25px;
+        flex: 0.5;
+        display: flex;
+        float: right;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+
+        span {
+          width: 100%;
+          height: 3px;
+          background-color: white !important;
+          transform-origin: left;
+          transition: all 2s ease;
+        }
+      }
+    }
+  }
+
+  &.active {
+    background-color: red;
+    color: blue;
+
+    .hamburger {
+      span {
+        &:first-child {
+          background-color: black;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: green;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+*/
