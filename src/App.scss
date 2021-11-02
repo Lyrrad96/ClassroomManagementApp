@@ -1,6 +1,6 @@
 .app {
   height: 100vh;
-background-color: black;
+//background-color: black;
   .sections {
     width: 100%;
     height: calc(100vh - 60px);
@@ -10,6 +10,9 @@ background-color: black;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
+    .tb{
+      height: 150px;
+    }
     &::-webkit-scrollbar {
       display: none;
     }

@@ -1,32 +1,10 @@
 import React, { Component, useState } from "react";
 import axios from 'axios'
 
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import "./Login.scss";
+import "./Signup.scss";
+import { Link } from 'react-router-dom';
 
-/*const mongoose = require('mongoose')
-const signUpTemplate = new mongoose.Schema({
-  fullname: {
-    type:String,
-    required:true
-  },
-  email:{
-    type:String,
-    required:true
-  },
-  password:{
-    type:String,
-    required:true
-  },
-  date:{
-    type:Date,
-    default:Date.now
-  }
-})
-module.exports = mongoose.model('mytable', signUpTemplate)
-*/
-export default class Login extends Component {
+export default class Signin extends Component {
   constructor(props) {
     super(props);
 
@@ -65,7 +43,7 @@ export default class Login extends Component {
   }
 render(){
   return(
-    <div className="Login ">
+    <div className="Signin ">
       <h3>Create User</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group">
@@ -73,8 +51,9 @@ render(){
           <input type="text" required className="form-control" defaultValue={this.state.username} onChange={this.onChangeUsername}/>
         </div>
         <div className="form-group">
-          <input type="submit" value="Create User" className="btn btn-primary"/>
+          <input type="submit" value="Create User" className="btn btn-primary"/>heh
         </div>
+        <Link to="/Signin">Sign In</Link>
       </form>
     </div>
   )

@@ -30,4 +30,15 @@ export default function Menu({menuOpen, setMenuOpen}) {
         </div>
     )
 }
-/*/
+*/
+import React, { Component } from 'react'
+
+export default class Menu extends Component{
+    render(){
+    return (
+        <div>
+            Menu
+        </div>
+    )
+}
+}

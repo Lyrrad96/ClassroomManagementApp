@@ -1,43 +1,55 @@
 import React from 'react'
-import Table from 'react-bootstrap/Table'
+import { ScheduleComponent, Inject, Day, Week, WorkWeek, Month } from '@syncfusion/ej2-react-schedule';
+/*<ScheduleComponent>
+<Inject services={[Day, Week, WorkWeek, Month]}></Inject>
+</ScheduleComponent>)*/
+export default class Timetable extends React.Component {
+  render() {
+    return (
 
-export default function Timetable() {
-  return (
-    <div className="table">
-      <div>1</div>
-      <div>1</div>
-      <div>1</div>
-      <div>1</div>
-      <Table responsive="sm">
-  <thead>
-    <tr>
-      <th>#</th>
-      {Array.from({ length: 12 }).map((_, index) => (
-        <th key={index}>Table heading</th>
-      ))}
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      {Array.from({ length: 12 }).map((_, index) => (
-        <td key={index}>Table cell {index}</td>
-      ))}
-    </tr>
-    <tr>
-      <td>2</td>
-      {Array.from({ length: 12 }).map((_, index) => (
-        <td key={index}>Table cell {index}</td>
-      ))}
-    </tr>
-    <tr>
-      <td>3</td>
-      {Array.from({ length: 12 }).map((_, index) => (
-        <td key={index}>Table cell {index}</td>
-      ))}
-    </tr>
-  </tbody>
-</Table>
-    </div>
-  )
+      <div className="container">
+
+          <h1>Simple Inventory Table</h1>
+
+          <table>
+
+              <thead>
+
+              <tr>
+
+                  <th>Product Name</th>
+
+                  <th>Product Category</th>
+
+                  <th>Unit Price</th>
+
+                  <th>Action</th>
+
+              </tr>
+
+              </thead>
+
+              <tbody>
+
+                  <tr>
+
+                      <td/>
+
+                      <td/>
+
+                      <td/>
+
+                      <td/>
+
+                  </tr>
+
+              </tbody>
+
+          </table>
+
+      </div>
+
+  );
+
+}
 }

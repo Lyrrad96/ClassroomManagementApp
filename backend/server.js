@@ -11,14 +11,14 @@ const port = process.env.PORT || 5000;
 app.use(cors())
 app.use(express.json())
 
-const uri = process.env.ATLAS_URI;
+const uri = "mongodb+srv://Timetable:Timetable@cluster0.pyppl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 mongoose.connect(uri, { useNewUrlParser: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
     console.log("MongoDB database connection established");
 })
 
-const exercisesRouter = require('./routes/exercises')
+const exercisesRouter = require('./routes/timetable')
 const usersRouter = require('./routes/users')
 
 app.use('/exercises', exercisesRouter)

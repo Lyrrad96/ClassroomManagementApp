@@ -1,0 +1,50 @@
+@import "../../global.scss";
+
+.game {
+  background-color: pink;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  //margin-left: 25%;
+  margin-bottom: 450px;
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+} /*
+  .container {
+    width: 100%;
+    display: flex;
+
+    margin-bottom: 0px;
+    .item {
+      width: 240px;
+      height: 240px;
+      border-radius: 20px;
+      border: 1px solid lightgreen;
+      margin: 10px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: red;
+      overflow: hidden;
+      position: relative;
+      transition: all 0.5 ease;
+
+      h3 {
+        position: absolute;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+    }
+  }
+}
+*/

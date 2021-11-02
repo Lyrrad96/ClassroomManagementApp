@@ -1,4 +1,18 @@
 .table {
   border: 5px black;
-  background-color: green;
+  background-color: yellowgreen;
+  Table{
+    border: black;
+    border-width: 4px;
+    thead{
+border: red;
+tr{
+  border: red;
+  th{
+    border: red;
+  }
+
+}
+    }
+  }
 }

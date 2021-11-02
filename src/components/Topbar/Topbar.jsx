@@ -1,38 +1,39 @@
 import React from 'react';
 import "./Topbar.scss"
 import Elements from './Elements';
+import { Link } from 'react-router-dom';
 //import  { useState, useEffect } from 'react';
 
 export default function Topbar() {
 	const topbar = [
         {
             id: "home",
-            ahref: "#home",
+            ahref: "/",
             title: "Home",
 
         },
         {
             id: "contact",
-            ahref: "#Contact",
-            title: "Contact",
+            ahref: "/tt",
+            title: "Timetable",
 
         },
         {
             id: "features",
-            ahref: "#Features",
-            title: "Features",
+            ahref: "/Features",
+            title: "events",
 
         },
         {
             id: "howto",
-            ahref: "#Howto",
-            title: "How nyes to",
+            ahref: "/Howto",
+            title: "How to",
 
         },
         {
-            id: "login",
-            ahref: "#Login",
-            title: "Login/Sign Up",
+            id: "Signin",
+            ahref: "/Signin",
+            title: "Signin/Sign Up",
 
         }
 
@@ -44,7 +45,7 @@ export default function Topbar() {
 		<div className="topbar">
 			<div className="wrapper">
 				<div className="left">
-			<a href="#home">logo</a>
+			<Link to="/">logo</Link>
 			</div>
 			<div className="right"><ul >
 							{topbar.map((item) => (
