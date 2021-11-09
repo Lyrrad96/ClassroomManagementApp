@@ -20,8 +20,8 @@ export default function Topbar() {
         },
         {
             id: "features",
-            ahref: "/Features",
-            title: "events",
+            ahref: "/tit",
+            title: "table",
 
         },
         {

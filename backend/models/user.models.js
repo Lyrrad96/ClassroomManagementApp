@@ -5,10 +5,23 @@ const Schema = mongoose.Schema
 const userSchema = new Schema({
     username: {
         type: String,
-        required: true,
+        //required: true,
         unique: true,
-        trim: true,
-        minlength: 3
+       
+    },
+   password: {
+        type: String,
+        //required: true,
+       
+    },
+    fullname: {
+        type: String,
+        required: true,
+      
+    },
+    clas: {
+        type: String,
+        required: true,
     },
 }, {
     timestamps: true,

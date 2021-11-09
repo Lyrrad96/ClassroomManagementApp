@@ -1,48 +1,54 @@
 const router = require('express').Router()
-let Exercise = require('../models/timetable.models')
+let TT = require('../models/timetable.models')
 
 router.route('/').get((req,res) => {
-    Exercise.find()
-    .then(exercises => res.json(exercises))
+    TT.find()
+    .then(timetables => res.json(timetables))
     .catch(err => res.status(400).json('Error: ' + err))
 })
 
 router.route('/add').post((req, res) => {
-    const username = req.body.username
-    const description = req.body.description
-    const duration = Number(req.body.duration)
-    const date = Date.parse(req.body.date)
+    const userid = req.body.userid
+    const classes = req.body.classes
+    const section = req.body.section
 
-    const newExercise = new Exercise({username, description, duration, date})
+    const newTT = new TT({userid, classes, section})
 
-    newExercise.save()
-    .then(() => res.json('Exercise added!'))
+    newTT.save()
+    .then(() => res.json('TT added!'))
     .catch(err => res.status(400).json('Error: ' + err))
 })
 
 router.route('/:id').get((req, res) => {
-    Exercise.findById(req.params.id)
-    .then(exercises => res.json(exercises))
+    TT.findById(req.params.id)
+    .then(timetables => res.json(timetables))
     .catch(err => res.status(400).json('Error: ' + err))
 })
 
+router.route('/tt/:userid').get((req, res) => {
+    TT.findOne({userid:req.params.userid}
+        ).exec()
+    .then(tt => {res.json(tt)
+        //console.log(user.password)
+    })
+    .catch(err => res.status(400).json('Error: ' + err));
+})
 
 router.route('/:id').delete((req, res) => {
-    Exercise.findByIdAndDelete(req.params.id)
-    .then(() => res.json('Exercise deleted.'))
+    TT.findByIdAndDelete(req.params.id)
+    .then(() => res.json('TT deleted.'))
     .catch(err => res.status(400).json('Error: ' + err))
 })
 
 router.route('/update/:id').post((req, res) => {
-    Exercise.findById(req.params.id)
-    .then(exercises => {
-        exercises.username = req.body.username;
-        exercises.description = req.body.description;
-        exercises.duration = Number(req.body.duration);
-        exercises.date = Date.parse(req.body.date);
+    TT.findById(req.params.id)
+    .then(timetables => {
+        timetables.userid = req.body.userid;
+        timetables.classes = req.body.classes;
+        timetables.section = req.body.section;
     
-        exercises.save()
-        .then(() => res.json('Exercise updated!'))
+        timetables.save()
+        .then(() => res.json('TT updated!'))
         .catch(err => res.status(400).json('Error: ' + err));
 
     })

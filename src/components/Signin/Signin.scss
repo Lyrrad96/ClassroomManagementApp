@@ -6,12 +6,14 @@
     h3{
       color: aliceblue;
     }
-    input {
+    .group {
       cursor:text;
     }
-  
+  .submit{
+    cursor: pointer;
+  }
 
-  .form-group {
+  .form {
     margin: 0 auto;
     width: 220px;
   }
