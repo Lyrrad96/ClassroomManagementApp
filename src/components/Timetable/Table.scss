@@ -2,6 +2,12 @@
    margin: 20px;
    background-color: yellow;
     color: black;
+    th, tr, td{
+      padding: 20px;
+      width: 260px;
+      align-content: center;
+      align-items: center;
+    }
     .time_table_wrapper{
       height: "100%";
       margin: "0";

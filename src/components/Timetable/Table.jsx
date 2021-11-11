@@ -340,6 +340,11 @@ onClick={context.handleItemDelete.bind(context, i)}
           <tbody>
 
 {this.renderRows()}
+{this.renderRows()}
+{this.renderRows()}
+{this.renderRows()}
+{this.renderRows()}
+{this.renderRows()}
 
 </tbody>
   
