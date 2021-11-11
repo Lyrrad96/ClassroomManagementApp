@@ -21,17 +21,14 @@ export default class Signin extends Component {
   constructor(props) {
     super(props);
 
-    this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangePassword = this.onChangePassword.bind(this);
-  //  this.showuser = this.showuser.bind(this);
+
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      username: '',
+      email: '',
       password: '',
-      fullname: '',
-      clas: 0,
-
     }
   }/*
 {this.state.users
@@ -42,9 +39,9 @@ export default class Signin extends Component {
         </ul>
     )
 )}*/
-  onChangeUsername(e) {
+  onChangeEmail(e) {
     this.setState({
-      username:e.target.value
+      email:e.target.value
     })
   }
 
@@ -76,11 +73,11 @@ export default class Signin extends Component {
   )
 )}*/
 //componentDidMount() {
-    axios.get('http://localhost:5000/users/'+this.state.username)//+this.props.match.params.username)
+    axios.get('http://localhost:5000/users/'+this.state.email)//+this.props.match.params.username)
     .then(response => {
       if(response.data){
         this.setState({
-          username: response.data.username,
+          email: response.data.email,
           password: response.data.password,
           fullname: response.data.fullname,
           clas: response.data.class,
@@ -100,14 +97,14 @@ export default class Signin extends Component {
     .catch(error => {
       console.log(error.response.status(400).json('Error:'+error))
    })
-   this.props.history.push('/home/'+this.state.username); 
+   this.props.history.push('/tt/'); 
    /*
     searchChanged = event => {
       this.setState({ search: event.target.value })
   } 
     */
   
-}
+}/*
 render(){
   return(
     <div className="Signin ">
@@ -128,29 +125,27 @@ render(){
     </div>
   )
 }
+}*/
+render() {
+  return(
+    <div className="intro" id = "intro">
+        <div className="signin">
+            <div className="left">
+                <h1>Sign In</h1>
+                <form class="signin-form" onSubmit={this.onSubmit}>
+                    <label htmlFor="Email">Email</label>
+                    <input type="text" placeholder="Email" required onChange={this.onChangeEmail}/><br />
+                    <label htmlFor="Password">Password</label>
+                    <input type="password" placeholder="Password" required onChange={this.onChangePassword}/><br />
+                    <button className="submit">Sign In</button>
+                    <p class="message">Already registered? <Link to="/Signup">Sign Up</Link></p>
+                </form>
+            </div>
+            <div className="right" style={{width: '100%'}}>
+               
+            </div>
+        </div>
+    </div>
+)
 }
-/*
-componentDidMount() {
-    axios.get('http://localhost:5000/users/')
-    .then(response => {
-      //if(response.data.length > 0){
-        this.setState({
-          userlist: response.data,
-          
-        })
-//console.log(response.data[0].username)
-      //}  
-      
-    })
-    .catch(error => console.log("Error"+error));
-   /*
-    searchChanged = event => {
-      this.setState({ search: event.target.value })
-  } 
-    
-  }
-  userList() {
-    return this.state.user.map(currentuser => {
-      return <Users user={currentuser} key={currentuser.username}/>
-    })
-  }*/
+}

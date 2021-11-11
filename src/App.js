@@ -10,6 +10,7 @@ import Table from './components/Timetable/Table'
 import Timetable from './components/Timetable/TimetableData'
 import Details from './components/Details/Details'
 import Signup from './components/Signup/Signup'
+import Tsignup from './components/Signup/Tsignup'
 import Home from './components/Home/Home'
 //import { Router } from 'express'
 
@@ -36,6 +37,7 @@ export default function App() {
          <Route path="/Features" component={Details}/>
          <Route path="/Signin" component={Signin}/>
          <Route path="/Signup" component={Signup}/>
+         <Route path="/Tsignup" component={Tsignup}/>
          <Route path="/home" component={Home}/>
         </div>
     </div>

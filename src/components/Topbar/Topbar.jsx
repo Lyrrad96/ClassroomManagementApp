@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import "./Topbar.scss"
 import Elements from './Elements';
 import { Link } from 'react-router-dom';
@@ -52,7 +52,7 @@ export default function Topbar() {
 							<Elements  title={item.title}
 							ahref={item.ahref}
 							/*active={result === item.id}
-							setResult={setResult}*/
+							setResult={setResult}
 							/>
 							))}
 
@@ -88,6 +88,28 @@ export default function Topbar() {
 					</div>
 				</div>
 			</div>
-		</div>*/
+		</div>
 	);
+}
+*/
+
+import React from "react";
+import "./Topbar.scss"
+
+export default function Topbar(){
+    return(
+        <div className="topbar">
+            <div className="wrapper">
+                <div className="left">
+                    <a href="#intro" className="logo">Classroom Management</a>
+                </div>
+                <div className="right">
+                    <button className="btn Home">Home</button>
+                    <a href="#signup" style={{'text-decoration': 'none', color: 'inherit'}}><button className="btn Contact">SignUp</button></a>
+                    <a href="#signupteacher" style={{'text-decoration': 'none', color: 'inherit'}}><button className="btn Features">SignUppp</button></a>
+                    <button className="btn HowTo"></button>
+                </div>
+            </div>
+        </div>
+    )
 }

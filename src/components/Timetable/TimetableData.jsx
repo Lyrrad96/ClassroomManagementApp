@@ -250,18 +250,19 @@ return(
 
         </tr>
 )
+var link = "https://meet.google.com/?pli=1"
 
 return this.number.map((number)=>{
   if(number === 1)
   return (
     <tr>
       <td>Monday</td>
-      <td>{this.state.classes[0].Monday[0].Period1}</td>
-      <td>{cl.Monday[0].Period2}</td>
-      <td>{cl.Monday[0].Period3}</td>
-      <td>{cl.Monday[0].Period4}</td>
-      <td>{cl.Monday[0].Period5}</td>
-      <td>{cl.Monday[0].Period6}</td>
+      <td><a href={link}>{cl.Monday[0].Period1}</a>  </td>
+      <td><a href={link}>{cl.Monday[0].Period2}</a></td>
+      <td><a href={link}>{cl.Monday[0].Period3}</a></td>
+      <td><a href={link}>{cl.Monday[0].Period4}</a></td>
+      <td><a href={link}>{cl.Monday[0].Period5}</a></td>
+      <td><a href={link}>{cl.Monday[0].Period6}</a></td>
       <td>{cl.Monday[0].Period7}</td>
     </tr>
     
@@ -274,13 +275,13 @@ else if(number === 2)
 return (
   <tr>
     <td>Tuesday</td>
-    <td>{cl.Tuesday[0].Period1}</td>
-    <td>{cl.Tuesday[0].Period2}</td>
+    <td><a href={link}>{cl.Tuesday[0].Period1}</a></td>
+    <td><a href={link}>{cl.Tuesday[0].Period2}</a></td>
     <td>{cl.Tuesday[0].Period3}</td>
-    <td>{cl.Tuesday[0].Period4}</td>
+    <td><a href={link}>{cl.Tuesday[0].Period4}</a></td>
     <td>{cl.Tuesday[0].Period5}</td>
     <td>{cl.Tuesday[0].Period6}</td>
-    <td>{cl.Tuesday[0].Period7}</td>
+    <td><a href={link}>{cl.Tuesday[0].Period7}</a></td>
   </tr>
 
 )
@@ -292,8 +293,8 @@ return (
     <td>{cl.Wednesday[0].Period1}</td>
     <td>{cl.Wednesday[0].Period2}</td>
     <td>{cl.Wednesday[0].Period3}</td>
-    <td>{cl.Wednesday[0].Period4}</td>
-    <td>{cl.Wednesday[0].Period5}</td>
+    <td><a href={link}>{cl.Wednesday[0].Period4}</a></td>
+    <td><a href={link}>{cl.Wednesday[0].Period5}</a></td>
     <td>{cl.Wednesday[0].Period6}</td>
     <td>{cl.Wednesday[0].Period7}</td>
   </tr>
@@ -307,11 +308,11 @@ return (
     <td>Thursday</td>
     <td>{cl.Thursday[0].Period1}</td>
     <td>{cl.Thursday[0].Period2}</td>
-    <td>{cl.Thursday[0].Period3}</td>
-    <td>{cl.Thursday[0].Period4}</td>
+    <td><a href={link}>{cl.Thursday[0].Period3}</a></td>
+    <td><a href={link}>{cl.Thursday[0].Period4}</a></td>
     <td>{cl.Thursday[0].Period5}</td>
-    <td>{cl.Thursday[0].Period6}</td>
-    <td>{cl.Thursday[0].Period7}</td>
+    <td><a href={link}>{cl.Thursday[0].Period6}</a></td>
+    <td><a href={link}>{cl.Thursday[0].Period7}</a></td>
   </tr>
   
   
@@ -321,13 +322,13 @@ else if(number === 5)
 return (
   <tr>
     <td>Friday</td>
-    <td>{cl.Friday[0].Period1}</td>
-    <td>{cl.Friday[0].Period2}</td>
+    <td><a href={link}>{cl.Friday[0].Period1}</a></td>
+    <td><a href={link}>{cl.Friday[0].Period2}</a></td>
     <td>{cl.Friday[0].Period3}</td>
-    <td>{cl.Friday[0].Period4}</td>
-    <td>{cl.Friday[0].Period5}</td>
-    <td>{cl.Friday[0].Period6}</td>
-    <td>{cl.Friday[0].Period7}</td>
+    <td><a href={link}>{cl.Friday[0].Period4}</a></td>
+    <td><a href={link}>{cl.Friday[0].Period5}</a></td>
+    <td><a href={link}>{cl.Friday[0].Period6}</a></td>
+    <td><a href={link}>{cl.Friday[0].Period7}</a></td>
   </tr>
   
   
@@ -339,8 +340,8 @@ return (
     <td>Saturday</td>
     <td>{cl.Saturday[0].Period1}</td>
     <td>{cl.Saturday[0].Period2}</td>
-    <td>{cl.Saturday[0].Period3}</td>
-    <td>{cl.Saturday[0].Period4}</td>
+    <td><a href={link}>{cl.Saturday[0].Period3}</a></td>
+    <td><a href={link}>{cl.Saturday[0].Period4}</a></td>
     <td>{cl.Saturday[0].Period5}</td>
     <td>{cl.Saturday[0].Period6}</td>
     <td>{cl.Saturday[0].Period7}</td>

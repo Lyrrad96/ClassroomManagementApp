@@ -1,7 +1,8 @@
-@import '../../global.scss';
+@import "../../global.scss";
 
-.signup{
-    
+.signupteacher{
+    background-color: lightcoral;
+
     background-color:$mainColor;
     display: flex;
     align-items: center;
@@ -49,6 +50,10 @@
             width: 100%;
             }
 
+            /*#A a, #B a, #C a, #D a, #E a, #F a,{
+                text
+            }*/
+
             .submit {
             text-transform: uppercase;
             border-style: solid;
@@ -69,8 +74,12 @@
                 font-size: 20px;
                 font-weight: 400;
                 padding: 5px 45px;
-                
+               
             }
+            Link{
+                background-color: antiquewhite;
+            }
+            
         }
     }
 }
