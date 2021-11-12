@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Signin from './components/Signin/Signin'
 import Table from './components/Timetable/Table'
 import Timetable from './components/Timetable/TimetableData'
-import Details from './components/Details/Details'
+//import Details from './components/Details/Details'
 import Signup from './components/Signup/Signup'
 import Tsignup from './components/Signup/Tsignup'
 import Home from './components/Home/Home'
@@ -40,7 +40,6 @@ export default function App() {
    
          <Route path="/tt" component={Timetable}/>
          <Route path="/ttt" component={Table}/>
-         <Route path="/Features" component={Details}/>
          <Route path="/Signin" component={Signin}/>
          <Route path="/Signup" component={Signup}/>
          <Route path="/Tsignup" component={Tsignup}/>
@@ -49,7 +48,6 @@ export default function App() {
         </div>
     </div>
     </Router>
-    
   )
 }
 

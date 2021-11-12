@@ -31,6 +31,7 @@ export default class Signin extends Component {
     this.setState({
       email:e.target.value
     })
+    
   }
   onChangePassword(e) {
     this.setState({
@@ -87,7 +88,9 @@ export default class Signin extends Component {
       clas: res.data.clas,
     })
   });
-    
+    alert("Successfully created")
+    this.props.history.push('/tt/'); 
+
   }/*
 render(){
   return(
