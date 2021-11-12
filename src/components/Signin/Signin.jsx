@@ -87,7 +87,7 @@ export default class Signin extends Component {
         console.log(response.data.teacher)
         console.log("response")
         if(this.state.teacher === true)
-        this.props.history.push('/tit/'); 
+        this.props.history.push('/ttt/'); 
         else
         this.props.history.push('/tt/'); 
        /* const location = useLocation()

@@ -157,7 +157,7 @@ export default class Signin extends Component {
             section: response.data.section,
         } 
         )
-        console.log(response.data.classes[0])
+        console.log(response.data)
         console.log("response.data")
       
     })
@@ -165,7 +165,7 @@ export default class Signin extends Component {
       console.log(error.response.status(400).json('Error:'+error))
     }) 
 }
-
+/*
 updateMessage(event) {
 
   this.setState({
@@ -221,7 +221,7 @@ handleItemDelete(i) {
   });
 
 }
-
+*/
 renderRows(number) {
 
 
@@ -457,16 +457,8 @@ render(){
 
   <hr/>
 
-  <input className="submit" type="text"  onChange={this.onSubmit} />
-<button onClick={this.onSubmit}>
 
-Add Item
 
-</button>
-<div className="form submit">
-          <input type="submit"  value="Create User" className="btn btn-primary"/>
-        </div>
-        
 </form >
 
 </div>

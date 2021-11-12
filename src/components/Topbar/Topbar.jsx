@@ -6,14 +6,17 @@ import  { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 export default function Topbar() {
+	const location = useLocation().pathname
+	console.log(location)
+
 	const topbar = [
         {
             id: "home",
-            ahref: "/",
+            ahref: "/home",
             title: "Home",
 
         },
-        {
+       /* {
             id: "contact",
             ahref: "/tt",
             title: "Timetable",
@@ -21,36 +24,41 @@ export default function Topbar() {
         },
         {
             id: "features",
-            ahref: "/tit",
+            ahref: "/ttt",
             title: "table",
 
-        },
+        },*/
         {
             id: "howto",
-            ahref: "/Howto",
-            title: "How to",
+            ahref: "/home2",
+            title: "Features",
 
         },
         {
             id: "Signin",
             ahref: "/Signin",
-            title: "Signin/Sign Up",
+            title: "Signin",
+
+        },
+		{
+            id: "Logout",
+            ahref: "/home",
+            title: "Log Out",
 
         }
 
     ];
+
 	const [result, setResult] = useState("ye");
-	const location = useLocation()
-	console.log(location.pathname)
 	
 	return (
 		
 		<div className="topbar">
 			<div className="wrapper">
 				<div className="left">
-			<Link to="/">Classroom Management</Link>
-			</div>
-			<div className="right"><ul >
+				<Link to="/">Classroom Management</Link>
+				</div>
+				<div className="right"><ul >
 							{topbar.map((item) => (
 							<Elements  title={item.title}
 							ahref={item.ahref}
@@ -59,7 +67,8 @@ export default function Topbar() {
 							/>
 							))}
 
-						</ul></div>
+						</ul>
+				</div>
 			
 			</div>
 		</div>

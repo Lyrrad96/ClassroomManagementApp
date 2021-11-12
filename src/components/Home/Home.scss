@@ -7,9 +7,8 @@
     rgba(10, 126, 234, 0.25) 74.58%
   );
   display: flex;
-
   @mixin mob{
-      @include mobile {
+  @include mobile {
     flex-direction: column;
     align-items: center;
   }
@@ -25,7 +24,6 @@
       align-items: flex-end;
       justify-content: center;
       @mixin mob{
-
       @include mobile {
         align-items: flex-start;
       }
@@ -33,13 +31,13 @@
       img {
         height: 90%;
         @mixin mob{
-
         @include mobile {
           height: 45%;
           width: 45%;
           // justify-content: center;
           // align-items: center;
-        }}
+        }
+      }
       }
     }
   }
@@ -56,7 +54,6 @@
       justify-content: center;
       text-align: center;
       @mixin mob{
-
       @include mobile {
         padding: 0;
         align-items: center;
@@ -64,124 +61,45 @@
         height: auto;
       }
     }
+
       h2 {
         font-size: 50px;
         margin: 10px 0;
-
         @mixin mob{
-            @include mobile {
+        @include mobile {
           font-size: 40px;
           text-align: center;
           justify-content: center;
           align-items: center;
           margin: 0;
-        }}
+        }
+      }
       }
     }
   }
 }
-
-
-.home2 {
-  background: linear-gradient(
-    135.62deg,
-    rgba(0, 255, 194, 0.25) 9.42%,
-    rgba(10, 126, 234, 0.25) 74.58%
-  );
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 500;
-  @mixin mob{
-
-  @include mobile {
-    flex-direction: column;
-    align-items: center;
-  }
-  }
-  .features-container {
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(10, 126, 234, 0.4);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    margin: 20px;
-    @mixin mob{
-
-    @include mobile {
-      flex-direction: column;
-      width: 80%;
-      flex-wrap: wrap;
-    }
-    
-
-    .item {
-      padding: 40px;
-      text-align: center;
-
-
-        @include mobile {
-        padding: 10px;
-      }
-    }
+.enter{
+  align-content: center;
+  margin-right: 40px;
+  font-size: large;
+  color: black;
+  background-color: red;
+  width: 80px;
+  height: 40px;
 }
+a {
+
+  margin-top: 45%;
+  left: 60%;
+
+  img {
+    width: 30px;
+    animation: arrowBlink 2s infinite;
   }
 
-  h2 {
-    margin: 20px;
-  }
-  .apps-container {
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @mixin mob{
-        @include mobile {
-      flex-direction: column;
-      flex-wrap: wrap;
-      // height: 130px;
-      // width: 100px;
-    }}
-
-    .item {
-      padding: 20px;
-
-      @mixin mob{
-        @include mobile {
-        height: 130px;
-        width: 100px;
-      }
-    }}
-
-    img {
-      height: 100px;
+  @keyframes arrowBlink {
+    100% {
+      opacity: 0;
     }
-  }
-
-  h4 {
-    margin: 10px;
-  }
-  .sign {
-    .signupopts {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .item {
-        padding: 30px 30px;
-      }
-
-      img {
-        height: 80px;
-      }
-    }
-  }
-  .signn {
-    align-items: center;
-    text-align: center;
   }
 }
