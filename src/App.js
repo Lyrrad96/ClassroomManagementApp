@@ -38,7 +38,7 @@ export default function App() {
          <Route path="/Signin" component={Signin}/>
          <Route path="/Signup" component={Signup}/>
          <Route path="/Tsignup" component={Tsignup}/>
-         <Route path="/home" component={Home}/>
+         <Route path="/" component={Home}/>
         </div>
     </div>
     </Router>

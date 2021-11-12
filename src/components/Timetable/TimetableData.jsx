@@ -2,7 +2,7 @@ import React, { Component, useState } from "react";
 import axios from 'axios'
 
 import "./Table.scss";
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 export default class Signin extends Component {
   constructor(props) {
@@ -221,16 +221,11 @@ handleItemDelete(i) {
   });
 
 }
-get()
-{
-  return 1
-}
+
 renderRows(number) {
 
 
-  var no = number;
   var cl = this.state.classes[0]
-  var day = '.'+number
   console.log("day")
   console.log(this.state.classes[0].Monday)
 
@@ -265,8 +260,6 @@ return this.number.map((number)=>{
       <td><a href={link}>{cl.Monday[0].Period6}</a></td>
       <td>{cl.Monday[0].Period7}</td>
     </tr>
-    
-    
   )
 
 

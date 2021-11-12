@@ -4,7 +4,8 @@ import axios from 'axios'
 import "./Signin.scss";
 import { Link } from 'react-router-dom';
 
-import { useHistory ,useLocation } from 'react-router-dom';
+//import { useHistory ,useLocation } from 'react-router-dom';
+//import { response } from "express";
 
 /*
 const Users = props => {
@@ -83,7 +84,12 @@ export default class Signin extends Component {
           clas: response.data.class,
           teacher: response.data.teacher,
         })
-        console.log(response.data)
+        console.log(response.data.teacher)
+        console.log("response")
+        if(this.state.teacher === true)
+        this.props.history.push('/tit/'); 
+        else
+        this.props.history.push('/tt/'); 
        /* const location = useLocation()
         console.log(location.pathname)
         
@@ -97,7 +103,9 @@ export default class Signin extends Component {
     .catch(error => {
       console.log(error.response.status(400).json('Error:'+error))
    })
-   this.props.history.push('/tt/'); 
+   console.log(this.state.teacher)
+
+ 
    /*
     searchChanged = event => {
       this.setState({ search: event.target.value })
@@ -138,7 +146,7 @@ render() {
                     <label htmlFor="Password">Password</label>
                     <input type="password" placeholder="Password" required onChange={this.onChangePassword}/><br />
                     <button className="submit">Sign In</button>
-                    <p class="message">Already registered? <Link to="/Signup">Sign Up</Link></p>
+                    <p class="message">Don't have an account? <Link to="/Signup">Sign Up</Link></p>
                 </form>
             </div>
             <div className="right" style={{width: '100%'}}>
