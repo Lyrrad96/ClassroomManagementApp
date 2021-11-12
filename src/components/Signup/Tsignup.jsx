@@ -62,7 +62,9 @@ export default class Signin extends Component {
         teacher: res.data.teacher,
       })
     });
-      
+      alert("Successfully created")
+      this.props.history.push('/ttt/'); 
+
     }
 render(){
     return(

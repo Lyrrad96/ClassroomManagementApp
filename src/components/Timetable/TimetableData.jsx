@@ -94,7 +94,7 @@ export default class Signin extends Component {
             userid: response.data.userid,
             classes: [{
                 Monday: [{
-                    Period1: response.data.Period1,
+                    Period1: response.data.classes.Monday.Period1,
                     Period2: response.data.Period2,
                     Period3: response.data.Period3,
                     Period4: response.data.Period4,
@@ -245,7 +245,7 @@ return(
 
         </tr>
 )
-var link = "https://meet.google.com/?pli=1"
+var link = "https://meet.google.com/poa-xpoz-kuo"
 
 return this.number.map((number)=>{
   if(number === 1)
@@ -457,7 +457,7 @@ render(){
 
   <hr/>
 
-
+  <input type="submit"  value="Create User" className="btn btn-primary"/>
 
 </form >
 

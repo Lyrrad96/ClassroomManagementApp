@@ -117,7 +117,7 @@ export default function Intro() {
           <h2>Make sure you're never late for a class again!</h2>
         </div>
       </div>
-      <Link  className="enter" to="home2">Enter</Link>
+      <Link  className="enter" to="/home2">Enter</Link>
       <a href="/home2">
             <img src={arrow} alt="img" />
         </a>

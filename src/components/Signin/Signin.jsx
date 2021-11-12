@@ -80,8 +80,6 @@ export default class Signin extends Component {
         this.setState({
           email: response.data.email,
           password: response.data.password,
-          fullname: response.data.fullname,
-          clas: response.data.class,
           teacher: response.data.teacher,
         })
         console.log(response.data.teacher)

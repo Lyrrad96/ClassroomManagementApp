@@ -56,7 +56,7 @@ export default function Topbar() {
 		<div className="topbar">
 			<div className="wrapper">
 				<div className="left">
-				<Link to="/">Classroom Management</Link>
+				{/*<Link to="/">Classroom Management</Link>*/}
 				</div>
 				<div className="right"><ul >
 							{topbar.map((item) => (
